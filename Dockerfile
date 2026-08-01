@@ -1,6 +1,6 @@
 FROM ginuerzh/gost:latest
 
-# Railway dwara allocate kiye gaye port ko expose karein (Default: 443 ya PORT env)
-EXPOSE 443
+# Railway PORT environment variable aur Expose 
+EXPOSE 8080
 
-CMD ["-L=wss://bbytop:bbytop@:443"]
+CMD ["sh", "-c", "gost -L=wss://bbytop:bbytop@:8080"]
