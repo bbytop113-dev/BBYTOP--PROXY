@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "DOCKERFILE"
+  },
+  "deploy": {
+    "startCommand": "gost -L=http://:8080?auth=admin:securepassword123",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 0,
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
